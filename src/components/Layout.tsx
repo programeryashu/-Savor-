@@ -183,21 +183,42 @@ export const Layout: React.FC<LayoutProps> = ({ children, activePage, setActiveP
           </div>
 
           <div className="flex flex-col gap-4">
-            <a
-              onClick={handleContactClick}
-              className="font-sans text-sm text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer"
-            >
-              Contact
-            </a>
-            <a className="font-sans text-sm text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer">
-              Locations
-            </a>
-            <a
-              onClick={() => handleNavClick("reservations")}
-              className="font-sans text-sm text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer"
-            >
-              Reservations
-            </a>
+            <span className="font-sans text-xs font-semibold text-secondary uppercase tracking-widest mb-1">
+              Contact Us
+            </span>
+            <div className="flex flex-col gap-2.5">
+              <span className="font-sans text-xs text-on-surface-variant/75 flex items-center gap-1.5">
+                <span>📞</span> +91 98*** ***54
+              </span>
+              <a 
+                href="mailto:cont***@savore.in" 
+                className="font-sans text-xs text-secondary hover:text-on-surface transition-colors duration-200 flex items-center gap-1.5"
+              >
+                <span>✉️</span> cont***@savore.in
+              </a>
+              <span className="font-sans text-xs text-on-surface-variant/75 flex items-center gap-1.5">
+                <span>📍</span> 12* Luxury Rd, Mum***
+              </span>
+              <div className="flex gap-2 mt-2 pt-2 border-t border-white/5">
+                <a 
+                  href="https://instagram.com/sav***_dining" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="font-sans text-[10px] text-secondary hover:text-on-surface transition-colors duration-200"
+                >
+                  IG: @sav***_dining
+                </a>
+                <span className="text-white/10 text-xs">|</span>
+                <a 
+                  href="https://x.com/sav***_dining" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="font-sans text-[10px] text-secondary hover:text-on-surface transition-colors duration-200"
+                >
+                  X: @sav***_dining
+                </a>
+              </div>
+            </div>
           </div>
 
           <div className="flex flex-col gap-4">
