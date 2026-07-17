@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Savoré - Seasonal Curations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1c1b1b",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#c4c7c7",
+                        "surface-container": "#201f1f",
+                        "tertiary-container": "#100f0e",
+                        "on-primary-fixed-variant": "#474646",
+                        "on-secondary-fixed-variant": "#4f4630",
+                        "inverse-primary": "#5f5e5e",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#4f4630",
+                        "on-tertiary-fixed": "#1d1b1a",
+                        "on-error": "#690005",
+                        "on-surface": "#e5e2e1",
+                        "surface-bright": "#3a3939",
+                        "surface-container-highest": "#353434",
+                        "on-primary": "#313030",
+                        "background": "#141313",
+                        "surface-tint": "#c8c6c5",
+                        "surface-container-high": "#2b2a2a",
+                        "on-secondary": "#38301b",
+                        "on-primary-container": "#7d7b7b",
+                        "inverse-on-surface": "#313030",
+                        "secondary": "#d3c5a8",
+                        "on-tertiary-container": "#7e7b79",
+                        "primary": "#c8c6c5",
+                        "surface-variant": "#353434",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary": "#32302f",
+                        "on-secondary-container": "#c1b498",
+                        "primary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#484645",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary-fixed": "#f0e1c3",
+                        "secondary-fixed-dim": "#d3c5a8",
+                        "tertiary": "#cac6c3",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline-variant": "#444748",
+                        "on-secondary-fixed": "#221b08",
+                        "surface": "#141313",
+                        "tertiary-fixed": "#e6e1df",
+                        "primary-container": "#0f0f0f",
+                        "surface-dim": "#141313",
+                        "outline": "#8e9192",
+                        "on-primary-fixed": "#1c1b1b",
+                        "tertiary-fixed-dim": "#cac6c3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1440px",
+                        "gutter": "32px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bodoni Moda"],
+                        "label-lg": ["Manrope"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "display-lg": ["Bodoni Moda"],
+                        "headline-xl": ["Bodoni Moda"],
+                        "display-lg-mobile": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-lg": ["84px", { "lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-xl": ["60px", { "lineHeight": "72px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "54px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Ambient Background Effect */
+        body {
+            background: radial-gradient(circle at 50% 0%, rgba(211, 197, 168, 0.05) 0%, rgba(20, 19, 19, 1) 70%);
+            background-attachment: fixed;
+        }
+        
+        /* Glassmorphism Utilities */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .glass-header {
+            background: rgba(20, 19, 19, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .gold-border-subtle {
+            border: 0.5px solid rgba(211, 197, 168, 0.2);
+        }
+
+        /* Hide scrollbar for category tabs */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Sommelier List Pattern */
+        .sommelier-divider {
+            height: 1px;
+            flex-grow: 1;
+            background: linear-gradient(to right, rgba(211, 197, 168, 0.2), rgba(211, 197, 168, 0));
+            margin: 0 16px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased min-h-screen pb-32">
+<!-- TopAppBar (from JSON) -->
+<header class="fixed top-0 w-full z-50 glass-header shadow-2xl transition-all duration-300" id="main-header">
+<div class="flex items-center justify-between px-margin-mobile md:px-margin-desktop py-base max-w-container-max mx-auto">
+<button class="text-secondary dark:text-secondary-fixed-dim hover:bg-white/5 transition-all duration-300 p-2 rounded-full active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg tracking-tighter text-on-surface">Savoré</h1>
+<button class="hidden md:block bg-secondary text-background font-label-lg px-6 py-3 rounded-DEFAULT hover:bg-secondary-fixed-dim transition-colors">
+                Book a Table
+            </button>
+<button class="md:hidden text-secondary dark:text-secondary-fixed-dim p-2 rounded-full">
+<span class="material-symbols-outlined">restaurant</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="mb-16 md:mb-section-gap pt-12 md:pt-24 text-center">
+<h2 class="font-headline-xl text-headline-xl text-secondary mb-4 drop-shadow-lg">Seasonal Curations</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                An exploration of earth and ocean, crafted with intention and presented with quiet reverence.
+            </p>
+</section>
+<!-- Category Navigation (Sticky on Mobile) -->
+<div class="sticky top-[72px] z-40 -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0 py-4 mb-12 glass-header md:bg-transparent md:backdrop-filter-none md:border-none">
+<nav class="flex overflow-x-auto no-scrollbar gap-8 whitespace-nowrap">
+<a class="font-label-lg text-label-lg text-secondary border-b border-secondary pb-2 px-1" href="#appetizers">Appetizers</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-2 px-1" href="#entrees">Entrées</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-2 px-1" href="#desserts">Desserts</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors pb-2 px-1" href="#wine-list">Wine List</a>
+</nav>
+</div>
+<!-- Featured Card (Glassmorphism) -->
+<section class="mb-24">
+<div class="glass-panel rounded-xl overflow-hidden relative group gold-border-subtle">
+<div class="h-64 md:h-96 w-full relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up, high-resolution food photography shot of an exquisite, Michelin-star level appetizer. A delicate seared scallop rests on a bed of dark truffle foam, garnished with microgreens and edible gold leaf. The lighting is cinematic and moody, top-down, highlighting the textures of the dish against a dark slate background. Evokes a sense of exclusive, high-end culinary artistry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqzYJyYFRUJ0r3bVRudDD9YgZZCJnOKPUrYfZYmT1Fu_JVS_gZOTvf41YEa5F5Ux_vZJ4ZLbDQAXWs6qlJm39F1yAFXsF2nHlJqxUG8Qbz6kj35J2I6NWEtU893aMQ8ks6Dj3gC9j777P77OpHHF3EU_vbFpdH6kjcHB4fX0l_2ffK3G0P3nSq5NTyFVeVsFJ30vF9qWEKlrC8fq_lJJo1DWydzaYXWWBxq1M4ajWKmVbYhTMBLfAK"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-6 md:p-12">
+<div class="uppercase font-label-sm text-label-sm text-secondary tracking-widest mb-2">Chef's Signature</div>
+<h3 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">Diver Scallop &amp; Truffle</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl hidden md:block">Hand-harvested scallops, black winter truffle emulsion, parsnip purée, and delicate sea herbs.</p>
+</div>
+</div>
+</section>
+<!-- Menu Section: Appetizers -->
+<section class="mb-24 scroll-mt-32" id="appetizers">
+<h3 class="font-headline-md text-headline-md text-secondary mb-12 border-b border-white/5 pb-4">Appetizers</h3>
+<div class="space-y-12">
+<!-- Sommelier List Item Pattern -->
+<div class="flex flex-col md:flex-row md:items-end justify-between group cursor-pointer">
+<div class="flex-grow">
+<div class="flex items-center mb-2">
+<h4 class="font-headline-md text-[24px] text-on-surface group-hover:text-secondary transition-colors">Wagyu Tartare</h4>
+<div class="sommelier-divider hidden md:block"></div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant/60 max-w-lg">A5 Wagyu beef, cured egg yolk, caper leaves, served with toasted brioche points.</p>
+</div>
+<div class="mt-2 md:mt-0 font-label-lg text-label-lg text-secondary">
+                        $42
+                    </div>
+</div>
+<div class="flex flex-col md:flex-row md:items-end justify-between group cursor-pointer">
+<div class="flex-grow">
+<div class="flex items-center mb-2">
+<h4 class="font-headline-md text-[24px] text-on-surface group-hover:text-secondary transition-colors">Heirloom Tomato Consommé</h4>
+<div class="sommelier-divider hidden md:block"></div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant/60 max-w-lg">Clarified tomato essence, basil oil, and delicate summer vegetable pearls.</p>
+</div>
+<div class="mt-2 md:mt-0 font-label-lg text-label-lg text-secondary">
+                        $28
+                    </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Button (Mobile Only) -->
+<div class="fixed bottom-margin-mobile right-margin-mobile z-50 md:hidden">
+<button class="bg-secondary text-background shadow-[0_10px_30px_rgba(211,197,168,0.3)] rounded-full h-16 px-8 flex items-center justify-center font-label-lg text-label-lg uppercase tracking-widest active:scale-95 transition-transform">
+            Book a Table
+        </button>
+</div>
+<!-- Footer (from JSON) -->
+<footer class="w-full relative bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-white/5 mt-32">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-12 md:py-section-gap max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2 mb-8 md:mb-0">
+<span class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface block mb-4">Savoré</span>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Savoré. All rights reserved.</p>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer w-max" href="#">Contact</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer w-max" href="#">Locations</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer w-max" href="#">Reservations</a>
+</div>
+<div class="flex flex-col space-y-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer w-max" href="#">Press</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200 cursor-pointer w-max" href="#">Newsletter</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-[0_4px_30px_rgba(0,0,0,0.5)]');
+            } else {
+                header.classList.remove('shadow-[0_4px_30px_rgba(0,0,0,0.5)]');
+            }
+        });
+    </script>
+</body></html>
